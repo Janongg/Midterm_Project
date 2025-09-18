@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portfolio</title>
+	<!-- css files -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+	<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='Images/favicon.png') }}">
+	<meta name="author" content="Rhome Elgine Aldaca">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+	<body>
+		<!-- Navbar -->
+		<nav class="nav container void-background">
+			<!-- This "nav-menu" is hidden on mobile -->
+			<!-- Add the modifier "is-active" to display it on mobile -->
+			<div class="nav-left">
+				<a href="" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-medium"></i>
+					</span>
+				</a>
+				<a href="https://github.com/Janongg" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-github"></i>
+					</span>
+				</a>
+				<a href="" class="nav-item">
+					<span class="icon">
+						<i class="fa fa-twitter"></i>
+					</span>
+				</a>				
+			</div>
+
+			<div class="nav-right nav-menu">
+				<a class="nav-item" href="#home">Home</a>
+				<a class="nav-item" href="#about">About</a>
+				<a class="nav-item" href="#skills">Skills</a>
+				<a class="nav-item" href="#projects">Projects</a>
+				<a class="nav-item" href="#contact">Contact</a>
+			</div>
+
+			<!-- This "nav-toggle" hamburger menu is only visible on mobile -->
+			<!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
+			<span class="nav-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</span>
+		</nav>
+				
+		<!-- Home -->
+		<section id="home" class="section section-1">
+			<div class="container has-text-centered">
+				<h1 class="title-is-1">Welcome to My Portfolio</h1>
+				<p class="intro">Hi! I'm Rhome Elgine Aldaca, a Inspired developer and designer.</p>
+			</div>
+		</section>
+
+		<!-- About Me -->
+		<section id="about" class="section section-1">
+			<div class="container has-text-centered">
+				<!-- Source: https://flic.kr/p/pAZBNK -->
+				<img class="avatar" src="{{ url_for('static', filename='Images/profile.png') }}" alt="Profile Picture">
+			</div>
+			<div class="container"></br>
+				<p class="intro">
+					I'm Rhome Elgine Aldaca, an aspiring web developer and designer passionate about building responsive, user-friendly, and visually appealing websites.
+‎With a strong foundation in HTML, CSS, and JavaScript, I aim to create digital solutions that are both functional and creative.
+‎My goal is to continue growing as a developer while contributing to projects that make a positive impact.
+				</p>
+			</div>
+		</section>
+
+		<!-- Skills -->
+		<section id="skills" class="section section-2">
+			<div class="container">
+				<div class="has-text-centered">
+					<h3 class="title is-3">Skills</h3>
+				</div>
+				<div class="columns is-multiline is-desktop">
+					<div class="column is-one-third">
+						<div class="box">
+							<h4 class="title is-4">Web Development</h4>
+							<p>HTML, CSS, JavaScript, React, Vue.js</p>
+						</div>
+					</div>
+					<div class="column is-one-third">
+						<div class="box">
+							<h4 class="title is-4">Backend</h4>
+							<p>Node.js, Express, Python, Django</p>
+						</div>
+					</div>
+					<div class="column is-one-third">
+						<div class="box">
+							<h4 class="title is-4">Tools & Platforms</h4>
+							<p>Git, Docker, AWS, Heroku</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- Projects -->
+		<section  id="projects" class="section section-2">
+			<div class="container">
+				<div class="has-text-centered">
+					<h3 class="title is-3">Projects</h3>
+				</div>
+				
+				<div class="columns is-multiline is-desktop">
+					<!-- Project 1 -->
+					<div class="column">
+						<div class="box project-text">
+							<article>
+								<div>
+									<figure class="image project-figure">
+										<img src="{{ url_for('static', filename='Images/project-1.jpg') }}" alt="Project 1">
+									</figure>
+								</div>
+								<div>			
+									<p>
+										‎A mobile-based platform that offers tricycle shuttle services and package delivery for both urban and rural areas, providing convenient, affordable, and reliable transportation and delivery solutions for the community.
+									</p>
+								</div>
+							</article>
+						</div>
+					</div>
+					<!-- Project 2 -->
+					<div class="column">
+						<div class="box project-text">
+							<article>
+								<div>
+									<figure class="image project-figure">
+										<img src="{{ url_for('static', filename='Images/project-2.jpg') }}" alt="Project 2">
+									</figure>
+								</div>
+								<div>			
+									<p>
+										A low-fidelity wireframe showcasing the user flow of TodaGo, including ride booking, delivery requests, and real-time tracking. This prototype was created to visualize the app’s structure and improve usability before moving into high-fidelity design.
+									</p>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact -->
+		<section id="contact" class="section section-3">
+			<div class="container">
+				<div class="has-text-centered">					
+					<h3 class="title is-3">Contact Me</h3>
+				</div>
+				<div class="columns is-centered">
+					<div class="column is-half">
+						<form action="mailto:your.email@example.com" method="post" enctype="text/plain">
+							<div class="field">
+								<label class="label" for="name">Name</label>
+								<div class="control">
+									<input class="input" type="text" id="name" name="name" placeholder="Your Name" required>
+								</div>
+							</div>
+							<div class="field">
+								<label class="label" for="email">Email</label>
+								<div class="control">
+									<input class="input" type="email" id="email" name="email" placeholder="Your Email" required>
+								</div>
+							</div>
+							<div class="field">
+								<label class="label" for="message">Message</label>
+								<div class="control">
+									<textarea class="textarea" id="message" name="message" placeholder="Your Message" required></textarea>
+								</div>
+							</div>
+							<div class="field is-grouped is-grouped-centered">
+								<div class="control">
+									<button class="button is-link" type="submit">Send</button>
+								</div>
+								<div class="control">
+									<button class="button is-light" type="reset">Reset</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- Social -->
+		<section id="social" class="section section-3">
+			<div class="container">
+				<div class="has-text-centered">					
+					<h3 class="title is-3">Let's Socialize</h3>
+				</div>
+				<div class="social-container columns">
+					<div class="column is-6 has-text-centered">
+						<a target="_blank" href=""><img src="{{ url_for('static', filename='Images/linkedin.png') }}" alt="LinkedIn"></a>
+					</div>
+					<div class="column is-6 has-text-centered">
+						<a target="_blank" href="https://www.facebook.com/share/17WLTUULnM/"><img src="{{ url_for('static', filename='Images/facebook.png') }}" alt="Facebook"></a>
+					</div>
+				</div>
+			</div>
+		</section>	
+		
+		<!-- Footer -->
+		<section class="section-4 has-text-centered container">
+			<a href="">Rhome Elgine Aldaca</a>
+		</section>
+		
+		<!-- Scripts  -->
+		<script src="{{ url_for('static', filename='controller.js') }}"></script>
+	</body>	
+</html>
